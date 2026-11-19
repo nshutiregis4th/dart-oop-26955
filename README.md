@@ -38,3 +38,22 @@ Paid 217 RWF
 Owner: Regis NSHUTI | Balance: 1333 RWF
 
 Student card: 15% off
+
+
+## Part 4: Bug hunt
+
+### Bug table
+
+| Bug | The line | Why it is wrong (my words) | My fix |
+|---|---|---|---|
+| 1 | Lines 2–3: `_brand` and `_battery` | Dart needs starting values for these non-nullable fields. | I initialized them to `''` and `0`. |
+| 2 | Line 18: `SmartPhone(...)` | The `Phone` constructor needs `brand` and `battery`, but this constructor does not pass them to the parent. | I added `: super(brand, battery)`. |
+| 3 | Line 22: `@override` above `restart()` | `Phone` has no `restart()` method for `SmartPhone` to override. | I added a `restart()` method to `Phone`. |
+| 4 | Missing setter in `Phone`; error appeared at line 30 | I assigned `p.battery`, but `Phone` only had a getter. | I added a setter that accepts values from 0 to 100. |
+| 5 | Line 31: `print(p.battery());` | `battery` is a getter, not a method. | I changed it to `print(p.battery);`. |
+| Not a bug | Line 30: `p.battery = 100;` | This is valid once the setter exists, and 100 is allowed. | No fix was needed for this line. |
+
+### Output after fixing
+
+```text
+100
