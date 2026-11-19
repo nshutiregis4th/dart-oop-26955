@@ -62,7 +62,7 @@ Student card: 15% off
 ## Part 5: Prediction
 I think the first output will be 1. Because The bag starts at 0, and add() makes it 1. Setting the count to -5 will be ignored because the setter only accepts values of 0 or more.
 
-I think the second output will be 5. Because Each BigBag.add() adds two items. So  it is called twice, so the count becomes 4. Then I add 1, making it 5.
+I think the second output will be 5. Because Each BigBag.add() adds two items. So it is called twice, so the count becomes 4. Then next line adds 1, making it 5.
 
 ## Part 5: Actual output
 
