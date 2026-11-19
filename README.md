@@ -12,7 +12,7 @@
 
 ## Part 1: Why no setter for balance?
 I did not add a direct setter for the balance because it could let someone change the balance to an invalid amount. The topUp and pay methods control balance changes using the card rules.
-## Output of main.dart
+## The Output of main.dart
 PS D:\GitHub\dart-oop-26955> dart run main.dart
 
 Error: name too short
